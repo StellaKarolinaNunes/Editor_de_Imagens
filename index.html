@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Editor de Imagens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 
+    Nome: Stella Karolina Nunes Peixoto, João Gabriel Peres de Castro e Jhonefer Vinicius Lima da Silva
+    Descrição: Aplicação do Composite - Editor de Imagens
+    Versão: 1.0
+    ============================
+    Índice do HTML
+    ============================
+    01. Fontes e Estilos
+    02. Ícones de Fundo
+    03. Container do Editor
+      03.1 Cabeçalho
+      03.2 Corpo do Editor
+        03.2.1 Painel de Ferramentas
+          03.2.1.1 Seção de Filtros
+          03.2.1.2 Seção de Rotação
+        03.2.2 Pré-visualização da Imagem
+      03.3 Controles do Editor
+    04. Scripts
+    ============================
+  -->
+
+  <!-- ============================
+       01. Fontes e Estilos
+  ============================ -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============================
+       02. Ícones de Fundo
+  ============================ -->
+  <!-- <div class="icones-fundo" aria-hidden="true">
+    <i class="fas fa-camera"></i>
+    <i class="fas fa-images"></i>
+    <i class="fas fa-photo-video"></i>
+    <i class="fas fa-camera-retro"></i>
+    <i class="fas fa-edit"></i>
+    <i class="fas fa-sliders-h"></i>
+    <i class="fas fa-crop"></i>
+    <i class="fas fa-adjust"></i>
+  </div> -->
+
+  <!-- ============================
+       03. Container do Editor
+  ============================ -->
+  <main class="container-editor editor-desativado">
+
+    <!-- 03.1 Cabeçalho -->
+    <header>
+      <h1 class="titulo-editor">Editor de Imagens</h1>
+      <button id="botao-tema" aria-label="Alternar tema" title="Alternar tema">
+        <i class="fas fa-moon"></i>
+      </button>
+    </header>
+    <BR>
+    
+    <!-- 03.2 Corpo do Editor -->
+    <section class="corpo-editor">
+
+      <!-- 03.2.1 Painel de Ferramentas -->
+      <aside class="painel-editor">
+
+        <!-- 03.2.1.1 Seção de Filtros -->
+        <section class="secao-filtro">
+          <h2 class="titulo-secao">Filtros</h2>
+          <div class="opcoes-filtro">
+            <button id="brilho" class="ativo">Brilho</button>
+            <button id="saturacao">Saturação</button>
+            <button id="inversao">Inversão</button>
+            <button id="escala-cinza">Escala de Cinza</button>
+          </div>
+<BR>
+          <div class="slider-filtro">
+            <div class="info-filtro">
+              <span class="nome-filtro">Brilho</span>
+              <span class="valor-filtro">100%</span>
+            </div>
+            <input type="range" min="0" max="200" value="100" />
+          </div>
+        </section>
+
+        <!-- 03.2.1.2 Seção de Rotação -->
+        <section class="secao-rotacao">
+          <h2 class="titulo-secao">Girar & Espelhar</h2>
+          <div class="opcoes-rotacao">
+            <button id="esquerda" aria-label="Girar para a esquerda">
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
+            <button id="direita" aria-label="Girar para a direita">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            <button id="horizontal" aria-label="Espelhar horizontalmente">
+              <i class='bx bx-reflect-vertical'></i>
+            </button>
+            <button id="vertical" aria-label="Espelhar verticalmente">
+              <i class='bx bx-reflect-horizontal'></i>
+            </button>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- 03.2.2 Pré-visualização da Imagem -->
+      <div class="preview-imagem">
+        <img src="./assets/imagem/imagem_padrao.svg" alt="Pré-visualização da imagem" />
+      </div>
+
+    </section>
+    <br>
+
+    <!-- 03.3 Controles do Editor -->
+    <footer class="botoes-controle">
+      <button class="botao-resetar">Redefinir Filtros</button>
+      <div class="conjunto-botoes">
+        <label class="botao-enviar">
+          Selecionar Imagem
+          <input type="file" class="input-file" accept="image/*" hidden />
+        </label>
+        <button class="botao-salvar">Salvar Imagem</button>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ============================
+       04. Scripts
+  ============================ -->
+  <!-- <script type="module" src="./assets/javascript/main.js"></script> -->
+<script src="./assets/javascript/main.js"></script>
+</body>
+</html>
