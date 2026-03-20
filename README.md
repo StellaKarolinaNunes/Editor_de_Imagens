@@ -1,5 +1,5 @@
   <h1 align="center">
-       E
+       Editor de Imagens
     <br />
     <br />
   <a href="https://github.com/StellaKarolinaNunes/Editor_de_Imagens">
